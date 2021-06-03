@@ -41,7 +41,7 @@ let books = [
 ]
 
 app.get('/', (request, response) => {
-  response.send('<h1>Hello </h1>')
+  response.send('<h1>Hello Books!</h1>')
 })
 
 app.get('/api/books/:id', (request, response) => {
