@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+* [Installation](#Installation)
 * [Info](#Info)
 * [Project's Aim](#Aim)
 * [Technologies Used](#Technologies)
@@ -10,6 +11,22 @@
 * [Scope of Functionalities](#Functionalities)
 * [Sources](#Sources)
 * [Contribution](#Contributing)
+
+## Installation
+Before working on this project make sure to clone this project first.
+``` 
+git clone https://github.com/lorenzojkrl/ecommerce-group-project.git 
+```
+After clonning, install all the dependencies using the following command:
+
+If you're using `npm`:
+```
+npm install
+```
+If you're using `yarn`:
+```
+yarn install
+```
 
 ## Info
 
