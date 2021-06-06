@@ -7,6 +7,7 @@ export default function FixedContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
+      {/* First Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
           component="div"
@@ -14,6 +15,7 @@ export default function FixedContainer() {
         ></Typography>
       </Container>
 
+      {/* Second Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
           component="div"
@@ -21,6 +23,7 @@ export default function FixedContainer() {
         ></Typography>
       </Container>
 
+      {/* Third Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
           component="div"
@@ -28,6 +31,7 @@ export default function FixedContainer() {
         ></Typography>
       </Container>
 
+      {/* Fourth Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
           component="div"
