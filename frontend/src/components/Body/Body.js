@@ -41,7 +41,7 @@ export default function Body() {
         </Typography>
       </Container>
 
-      {/* Second container */}
+      {/* Second Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Box display="flex">
           <Box p={25} bgcolor="grey.300">
@@ -51,7 +51,7 @@ export default function Body() {
         </Box>
       </Container>
 
-      {/* Third container */}
+      {/* Third Container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
           component="div"
