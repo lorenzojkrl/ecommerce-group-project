@@ -14,6 +14,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import Button from "@material-ui/core/Button";
 
 const drawerWidth = 250;
 
@@ -21,7 +22,18 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     backgroundColor: "#F0F5EF",
-    color: '#000000',
+    color: "#000000",
+  },
+  title: {
+    flexGrow: 1,
+  },
+  close_btn: {
+    [theme.breakpoints.up("xs")]: {
+      display: "none",
+    },
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+    },
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
@@ -39,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   hide: {
     display: "none",
@@ -46,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
   },
   drawerPaper: {
     width: drawerWidth,
@@ -93,10 +112,12 @@ export default function PersistentDrawerLeft() {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        }) && classes.root}
+        className={
+          clsx(classes.appBar, {
+            [classes.appBarShift]: open,
+          }) && classes.root
+        }
+        style={{ position: "relative" }}
       >
         <Toolbar>
           <IconButton
@@ -108,38 +129,52 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" className={classes.title}>
             Logo
           </Typography>
+
+          <Button color="inherit" className={classes.close_btn}>
+            About
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Contact
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Login
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Sign Up
+          </Button>
         </Toolbar>
+
+        <Drawer
+          className={classes.drawer}
+          variant="persistent"
+          anchor="left"
+          open={open}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerHeader}>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "ltr" ? (
+                <ChevronLeftIcon />
+              ) : (
+                <ChevronRightIcon />
+              )}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            {["About", "Contact", "Sign Up", "Login"].map((text) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
       </AppBar>
-      <Drawer
-        className={classes.drawer}
-        variant="persistent"
-        anchor="left"
-        open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
-      >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "ltr" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
-        </div>
-        <Divider />
-        <List>
-          {["Login", "Sign Up", "About", "Contact"].map((text) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
     </div>
   );
 }
