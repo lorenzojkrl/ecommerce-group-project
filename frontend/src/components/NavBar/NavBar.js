@@ -14,9 +14,7 @@ import {
   ListItemText,
   Button,
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { Menu, ChevronLeft, ChevronRight } from "@material-ui/icons";
 
 const drawerWidth = 250;
 
@@ -129,7 +127,7 @@ export default function PersistentDrawerLeft() {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <Menu />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Logo
@@ -160,11 +158,7 @@ export default function PersistentDrawerLeft() {
         >
           <div className={classes.drawerHeader}>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
+              {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
             </IconButton>
           </div>
           <Divider />
