@@ -2,22 +2,11 @@ import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles } from './BodyStyles'
 import Box from "@material-ui/core/Box";
 import "@fontsource/roboto";
 import Avatar from "@material-ui/core/Avatar";
 import TextField from "@material-ui/core/TextField";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    fontStyle: "bold",
-    fontWeight: 400,
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-}));
 
 export default function Body() {
   const classes = useStyles();
