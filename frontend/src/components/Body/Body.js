@@ -2,11 +2,13 @@ import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import { useStyles } from './BodyStyles'
 import Box from "@material-ui/core/Box";
-import "@fontsource/roboto";
-import Avatar from "@material-ui/core/Avatar";
 import TextField from "@material-ui/core/TextField";
+
+import "@fontsource/roboto";
+
+import { useStyles } from './BodyStyles';
+import { TrustBadgeContainer } from '../Containers/TrustBadgeContainer'
 
 export default function Body() {
   const classes = useStyles();
@@ -41,25 +43,9 @@ export default function Body() {
         </Box>
       </Container>
 
-      {/* Third Container */}
-      <Container disableGutters={true} maxWidth="xl">
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
-          variant="h3"
-        >
-          Trusted By
-          <Avatar alt="Remy Sharp" src="/broken-image.jpg">
-            B
-          </Avatar>
-          <Avatar
-            alt="Remy Sharp"
-            src="/broken-image.jpg"
-            className={classes.orange}
-          />
-          <Avatar src="/broken-image.jpg" />
-        </Typography>
-      </Container>
+      {/* Third container */}
+      <TrustBadgeContainer classes={classes} />
+
 
       {/* Fourth container */}
       <Container disableGutters={true} maxWidth="xl">
