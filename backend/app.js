@@ -16,27 +16,50 @@ app.use(requestLogger)
 let books = [
   {
     "id": 0,
-    "Title": "HTML is easy",
-    "date": "2019-05-30T17:30:31.098Z",
-    "ISBN": 123,
-    "Description": "A book about HTML",
-    "Reviews": ['review1', 'review2', 'review3']
+    "title": "HTML and CSS: Design and Build Websites",
+    "author": "Jon Ducket",
+    "synopsis": "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! Every day, more and more people want to learn some HTML and CSS. Joining the professional web designers and programmers are new audiences who need to know a little bit of code at work (update a content management system or e-commerce store) and those who want to make their personal blogs more attractive. Many books teaching HTML and CSS are dry and only written for those who want to become programmers, which is why this book takes an entirely new approach. * Introduces HTML and CSS in a way that makes them accessible to everyone hobbyists, students, and professionals and it s full-color throughout * Utilizes information graphics and lifestyle photography to explain the topics in a simple way that is engaging * Boasts a unique structure that allows you to progress through the chapters from beginning to end or just dip into topics of particular interest at your leisure This educational book is one that you will enjoy picking up, reading, then referring back to. It will make you wish other technical topics were presented in such a simple, attractive and engaging way! This book is also available as part of a set in hardcover - Web Design with HTML, CSS, JavaScript and jQuery, 9781119038634; and in softcover - Web Design with HTML, CSS, JavaScript and jQuery, 9781118907443.",
+    "format": "paperback",
+    "onOfPages": 512,
+    "publisher": " John Wiler & Sons Inc",
+    "datePublished": "2018-11-11",
+    "ISBN": 9781118008188,
+    "dimensions": "237x189x27",
+    "weight": 1174,
+    "price":16.53,
+    "quantity": 5,
+    "topic": ["html", "css"]
   },
   {
     "id": 1,
-    "Title": "Browser can execute only JavaScript",
-    "date": "2019-05-30T18:39:34.091Z",
-    "ISBN": 234,
-    "Description": "A book about JS",
-    "Reviews": ['review1', 'review2', 'review3']
+    "title": "JQuery in Easy Steps ",
+    "author": "Mike McGrath",
+    "format": "paperback",
+    "onOfPages": 192,
+    "publisher": "Computer Step",
+    "datePublished": "2011-02-14",
+    "ISBN": 9781840786194,
+    "dimensions": "227x186x10",
+    "weight": 431,
+    "price":10.99,
+    "quantity": 3,
+    "topic": ["JQuery"]
   },
   {
     "id": 2,
-    "Title": "GET and POST are the most important methods of HTTP protocol",
-    "date": "2019-05-30T19:20:14.298Z",
-    "ISBN": 345,
-    "Description": "A book about CRUD operations",
-    "Reviews": []
+    "title": "Python Pocket Reference",
+    "author": "Mark Lutz",
+    "synopsis": "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! Every day, more and more people want to learn some HTML and CSS. Joining the professional web designers and programmers are new audiences who need to know a little bit of code at work (update a content management system or e-commerce store) and those who want to make their personal blogs more attractive. Many books teaching HTML and CSS are dry and only written for those who want to become programmers, which is why this book takes an entirely new approach. * Introduces HTML and CSS in a way that makes them accessible to everyone hobbyists, students, and professionals and it s full-color throughout * Utilizes information graphics and lifestyle photography to explain the topics in a simple way that is engaging * Boasts a unique structure that allows you to progress through the chapters from beginning to end or just dip into topics of particular interest at your leisure This educational book is one that you will enjoy picking up, reading, then referring back to. It will make you wish other technical topics were presented in such a simple, attractive and engaging way! This book is also available as part of a set in hardcover - Web Design with HTML, CSS, JavaScript and jQuery, 9781119038634; and in softcover - Web Design with HTML, CSS, JavaScript and jQuery, 9781118907443.",
+    "format": "paperback",
+    "onOfPages": 512,
+    "publisher": " John Wiler & Sons Inc",
+    "datePublished": "2018-11-11",
+    "ISBN": 9781118008188,
+    "dimensions": "237x189x27",
+    "weight": 1174,
+    "price":16.53,
+    "quantity": 5,
+    "topic": ["html", "css"]
   }
 ]
 
