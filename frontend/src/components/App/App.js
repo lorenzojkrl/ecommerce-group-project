@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { getAll } from '../../services/book';
-import axios from 'axios';
 const theme = createMuiTheme({
   typography: {
     fontSize: 14,
@@ -13,8 +12,10 @@ const theme = createMuiTheme({
 });
 
 function App() {
-  
+  // You may want to save fetched data into a state
+  // useContext/Redux is also an option
   const [books, setBooks] = useState([])
+
   // Example reques using getAll function
   useEffect(() => {
     console.log(getAll());
@@ -27,7 +28,7 @@ function App() {
       <Body />
       <Footer />
     </ThemeProvider>
-    
+
   );
 }
 
