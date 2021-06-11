@@ -22,11 +22,13 @@ const TrustBadgeContainer = () => {
                     <Typography
                         variant="h2"
                         align="center"
+                        color="primary"
                     >
                     Trusted By
                     </Typography>
                 </Grid>
                 <Grid
+                    classes={{root: classes.cardGrid}}
                     container
                     direction="row"
                     justify="space-evenly"
@@ -36,7 +38,7 @@ const TrustBadgeContainer = () => {
                     wrap="nowrap"
                 >
                     <Grid item sm={3} xs={12}>
-                        <Card classes={{root: classes.card, 'MuiPaper-root': classes.card}}>
+                        <Card classes={{root: classes.card}}>
                             <CardMedia
                                 className={classes.media}
                                 image="https://avatars.githubusercontent.com/u/73719327?v=4"

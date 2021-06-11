@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
         flexFlow: "column",
         alignItems: "center",
     },
+    cardGrid: {
+        overflowX: "hidden"
+    },
     media: {
         height: 102,
         width: 102,
