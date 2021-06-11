@@ -4,7 +4,7 @@ import { useStyles } from './TrustBadgeContainerStyles'
 const TrustBadgeContainer = () => {
     const classes = useStyles(useStyles);
     return (
-        <Container disableGutters={true} maxWidth="xl">
+        // <Container disableGutters={true} maxWidth="xl" >
             <Grid
                 className={classes.root}
                 container
@@ -31,14 +31,14 @@ const TrustBadgeContainer = () => {
                     direction="row"
                     justify="space-evenly"
                     alignItems="center"
-                    item xs={12} 
+                    item xs={12}
                     spacing={3}
+                    wrap="nowrap"
                 >
                     <Grid item sm={3} xs={12}>
                         <Card classes={{root: classes.card, 'MuiPaper-root': classes.card}}>
                             <CardMedia
                                 className={classes.media}
-                                // style={{height: 102, width: 102, borderRadius: "50%"}}
                                 image="https://avatars.githubusercontent.com/u/73719327?v=4"
                                 title="Craig Norford"
                                 />
@@ -54,7 +54,6 @@ const TrustBadgeContainer = () => {
                         <Card classes={{root: classes.card}}>
                             <CardMedia
                                 className={classes.media}
-                                // style={{height: 102, width: 102, borderRadius: "50%"}}
                                 title="Eugene Gohh"
                                 image="https://avatars.githubusercontent.com/u/64187129?v=4"
                                 />
@@ -70,7 +69,6 @@ const TrustBadgeContainer = () => {
                         <Card  classes={{root: classes.card}}>
                             <CardMedia
                                 className={classes.media}
-                                // style={{height: 102, width: 102, borderRadius: "50%"}}
                                 title="Torey Littlefield"
                                 image="https://avatars.githubusercontent.com/u/52614742?v=4"
                                 />
@@ -83,10 +81,9 @@ const TrustBadgeContainer = () => {
                         </Card>
                     </Grid>
                     <Grid item sm={3} xs={12}>
-                        <Card  classes={{root: classes.card}}>
+                        <Card classes={{root: classes.card}}>
                             <CardMedia
                                 className={classes.media}
-                                // style={{height: 102, width: 102, borderRadius: "50%"}}
                                 title="Lorenzo Zarantonello"
                                 image="https://avatars.githubusercontent.com/u/18583152?v=4"
                                 />
@@ -100,7 +97,7 @@ const TrustBadgeContainer = () => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Container>
+        // </Container>
     )
 };
 
