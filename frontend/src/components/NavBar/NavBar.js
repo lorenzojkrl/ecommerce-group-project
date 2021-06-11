@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, ChevronLeft, ChevronRight } from "@material-ui/icons";
-import { useStyles, useTheme } from './NavBarStyles';
 import clsx from "clsx";
+import { useTheme } from "@material-ui/core/styles";
 import {
   Drawer,
   CssBaseline,
@@ -16,9 +16,11 @@ import {
   Button,
 } from "@material-ui/core";
 
-export default function PersistentDrawerLeft(props) {
-  const classes = useStyles(props);
-  const theme = useTheme(props);
+import { useStyles } from './NavBarStyles';
+
+export default function PersistentDrawerLeft() {
+  const classes = useStyles();
+  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -30,13 +32,13 @@ export default function PersistentDrawerLeft(props) {
   };
 
   return (
-    <div className={classes.root}>
+    <nav className={classes.root}>
       <CssBaseline />
       <AppBar
         className={
           clsx(classes.appBar, {
             [classes.appBarShift]: open,
-          }) && classes.root
+          })
         }
         style={{ position: "relative" }}
       >
@@ -92,6 +94,6 @@ export default function PersistentDrawerLeft(props) {
           </List>
         </Drawer>
       </AppBar>
-    </div>
+    </nav>
   );
 }
