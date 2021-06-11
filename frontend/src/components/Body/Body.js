@@ -1,14 +1,12 @@
 import React from "react";
+import "@fontsource/roboto";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
-
-import "@fontsource/roboto";
-
-import { useStyles } from './BodyStyles';
-import { TrustBadgeContainer } from '../Containers/TrustBadgeContainer'
+import { useStyles } from "./BodyStyles";
+import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
 export default function Body() {
   const classes = useStyles();
@@ -16,7 +14,7 @@ export default function Body() {
   return (
     <React.Fragment>
       <CssBaseline />
-    
+
       {/* First container */}
       <Container disableGutters={true} maxWidth="xl">
         <Typography
@@ -39,13 +37,11 @@ export default function Body() {
           <Box p={25} bgcolor="grey.300">
             Item 1
           </Box>
-
         </Box>
       </Container>
 
       {/* Third container */}
       <TrustBadgeContainer classes={classes} />
-
 
       {/* Fourth container */}
       <Container disableGutters={true} maxWidth="xl">
@@ -72,7 +68,6 @@ export default function Body() {
             </form>
           </Typography>
         </Typography>
-        
       </Container>
     </React.Fragment>
   );
