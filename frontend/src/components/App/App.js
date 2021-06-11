@@ -6,7 +6,7 @@ import Footer from "../Footer/Footer";
 import React, { useEffect, useState } from "react";
 import { getAll } from '../../services/book';
 
-import axios from 'axios';
+// import axios from 'axios'; // Uncommented for a moment
 import { Theme } from '../../theme-style/materialtheme'
 
 function App() {

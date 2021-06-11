@@ -9,7 +9,7 @@ const Theme = ({children}) => {
             }
         },
         typography: {
-            fontFamily: ['"Poppins"'],
+            fontFamily: ['"Roboto"'],
             fontSize: 14,
             h2: {
                 fontWeight: 750
