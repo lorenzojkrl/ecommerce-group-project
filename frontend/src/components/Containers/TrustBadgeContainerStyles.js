@@ -4,11 +4,16 @@ const useStyles = makeStyles((theme) => ({
     root: {
         backgroundColor: "#FFF0E5",
         // height: "80vh"
-        height: 500
+        height: 500,
+        textAlign: "center"
     },
     card: {
-        // backgroundColor: "#FFF0E5",
-        backgroundColor: "inherit"
+        boxShadow: "none",
+        backgroundColor: "inherit",
+        overflow: "hidden",
+        display: "inline-flex",
+        flexFlow: "column",
+        alignItems: "center",
     },
     media: {
         height: 102,
