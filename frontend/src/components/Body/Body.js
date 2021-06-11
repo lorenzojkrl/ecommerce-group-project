@@ -1,10 +1,11 @@
 import React from "react";
 import "@fontsource/roboto";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
-
-import TextField from "@material-ui/core/TextField";
+import {
+  CssBaseline,
+  Typography,
+  Container,
+  TextField,
+} from "@material-ui/core";
 import { useStyles } from "./BodyStyles";
 import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
@@ -29,13 +30,11 @@ export default function Body() {
 
       {/* Second Container */}
 
-      <Container disableGutters={true} maxWidth="xl">
-        <Box display="flex">
-          <Box p={25} bgcolor="grey.300">
-            Item 1
-          </Box>
-        </Box>
-      </Container>
+      <Container
+        disableGutters={true}
+        maxWidth="xl"
+        style={{ backgroundColor: "grey.300", height: "100vh" }}
+      ></Container>
 
       {/* Third container */}
       <TrustBadgeContainer classes={classes} />
