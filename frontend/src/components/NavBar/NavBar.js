@@ -15,8 +15,7 @@ import {
   ListItemText,
   Button,
 } from "@material-ui/core";
-
-import { useStyles } from './NavBarStyles';
+import useStyles from "./NavBarStyles";
 
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
@@ -32,13 +31,13 @@ export default function PersistentDrawerLeft() {
   };
 
   return (
-    <nav className={classes.root}>
+    <nav>
       <CssBaseline />
       <AppBar
         className={
           clsx(classes.appBar, {
             [classes.appBarShift]: open,
-          })
+          }) && classes.root
         }
         style={{ position: "relative" }}
       >
