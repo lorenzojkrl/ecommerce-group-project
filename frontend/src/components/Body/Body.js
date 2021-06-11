@@ -3,7 +3,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
 import "@fontsource/roboto";
 import Avatar from "@material-ui/core/Avatar";
 import TextField from "@material-ui/core/TextField";
@@ -25,40 +24,33 @@ export default function Body() {
   return (
     <React.Fragment>
       <CssBaseline />
-    
+
       {/* First container */}
-      <Container disableGutters={true} maxWidth="xl">
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
-          variant="h1"
-          className={classes.root}
-        >
+      <Container
+        disableGutters={true}
+        maxWidth="xl"
+        style={{ backgroundColor: "#FFF0E5", height: "100vh" }}
+      >
+        <Typography component="div" variant="h1" className={classes.root}>
           We innovate your <br /> online shopping <br /> experience
           <br />
-          <Typography variant="subtitle1">
-            What do you want to shop today? What do you need? Just tell us.
-          </Typography>
         </Typography>
       </Container>
 
       {/* Second Container */}
-      <Container disableGutters={true} maxWidth="xl">
-        <Box display="flex">
-          <Box p={25} bgcolor="grey.300">
-            Item 1
-          </Box>
-
-        </Box>
-      </Container>
+      <Container
+        disableGutters={true}
+        maxWidth="xl"
+        style={{ backgroundColor: "grey.300", height: "100vh" }}
+      ></Container>
 
       {/* Third Container */}
-      <Container disableGutters={true} maxWidth="xl">
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
-          variant="h3"
-        >
+      <Container
+        disableGutters={true}
+        maxWidth="xl"
+        style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
+      >
+        <Typography component="div" variant="h3">
           Trusted By
           <Avatar alt="Remy Sharp" src="/broken-image.jpg">
             B
@@ -73,7 +65,11 @@ export default function Body() {
       </Container>
 
       {/* Fourth container */}
-      <Container disableGutters={true} maxWidth="xl">
+      <Container
+        disableGutters={true}
+        maxWidth="xl"
+        style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
+      >
         <Typography
           component="div"
           style={{ backgroundColor: "#F0F5EF", height: "80vh" }}
@@ -97,7 +93,6 @@ export default function Body() {
             </form>
           </Typography>
         </Typography>
-        
       </Container>
     </React.Fragment>
   );

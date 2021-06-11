@@ -1,47 +1,98 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Menu, ChevronLeft, ChevronRight } from "@material-ui/icons";
+import clsx from "clsx";
+import { useTheme } from "@material-ui/core/styles";
+import {
+  Drawer,
+  CssBaseline,
+  AppBar,
+  Toolbar,
+  List,
+  Typography,
+  Divider,
+  IconButton,
+  ListItem,
+  ListItemText,
+  Button,
+} from "@material-ui/core";
+import useStyles from "./NavBarStyles";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
-export default function NavBar() {
+export default function PersistentDrawerLeft() {
   const classes = useStyles();
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <nav>
+      <CssBaseline />
+      <AppBar
+        className={
+          clsx(classes.appBar, {
+            [classes.appBarShift]: open,
+          }) && classes.root
+        }
+        style={{ position: "relative" }}
+      >
         <Toolbar>
           <IconButton
-            edge="start"
-            className={classes.menuButton}
             color="inherit"
-            aria-label="menu"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <Menu />
           </IconButton>
-
           <Typography variant="h6" className={classes.title}>
             Logo
           </Typography>
-          <Button color="inherit">Sign Up</Button>
-          <Button color="inherit">Login</Button>
+
+          <Button color="inherit" className={classes.close_btn}>
+            About
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Contact
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Login
+          </Button>
+          <Button color="inherit" className={classes.close_btn}>
+            Sign Up
+          </Button>
         </Toolbar>
+
+        <Drawer
+          className={classes.drawer}
+          variant="persistent"
+          anchor="left"
+          open={open}
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerHeader}>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
+            </IconButton>
+          </div>
+          <Divider />
+          <List>
+            {["About", "Contact", "Sign Up", "Login"].map((text) => (
+              <ListItem button key={text}>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
       </AppBar>
-    </div>
+    </nav>
   );
 }

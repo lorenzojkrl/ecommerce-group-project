@@ -5,13 +5,15 @@ import Footer from "../Footer/Footer";
 
 import React, { useEffect, useState } from "react";
 import { getAll } from '../../services/book';
+
 import axios from 'axios';
 import { Theme } from '../../theme-style/materialtheme'
 
-
 function App() {
-  
+  // You may want to save fetched data into a state
+  // useContext/Redux is also an option
   const [books, setBooks] = useState([])
+
   // Example reques using getAll function
   useEffect(() => {
     console.log(getAll());
