@@ -2,14 +2,12 @@ import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+
 import React, { useEffect, useState } from "react";
 import { getAll } from '../../services/book';
-const theme = createMuiTheme({
-  typography: {
-    fontSize: 14,
-  }
-});
+
+// import axios from 'axios'; // Uncommented for a moment
+import { Theme } from '../../theme-style/materialtheme'
 
 function App() {
   // You may want to save fetched data into a state
@@ -23,12 +21,12 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={theme}>
+    <Theme>
       <NavBar />
       <Body />
       <Footer />
-    </ThemeProvider>
-
+    </Theme>
+    
   );
 }
 
