@@ -7,6 +7,7 @@ import {
   TextField,
 } from "@material-ui/core";
 import FirstContainer from "../Containers/FirstContainer";
+import SecondContainer from "../Containers/SecondContainer";
 import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
 export default function Body() {
@@ -17,11 +18,7 @@ export default function Body() {
       <FirstContainer />
 
       {/* Second Container */}
-      <Container
-        disableGutters={true}
-        maxWidth="xl"
-        style={{ backgroundColor: "grey.300", height: "65ch" }}
-      ></Container>
+      <SecondContainer />
 
       {/* Third container */}
       <TrustBadgeContainer />
