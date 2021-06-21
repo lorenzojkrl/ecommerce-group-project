@@ -24,7 +24,7 @@ function FirstContainer() {
         </Box>
 
         <Box className={classes.display_macbook}>
-          <img src={MacBook} alt="macbook" width="450" />
+          <img src={MacBook} alt="macbook" width="390vw" />
         </Box>
       </Grid>
     </Container>
