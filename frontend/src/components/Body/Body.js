@@ -1,13 +1,9 @@
 import React from "react";
 import "@fontsource/roboto";
-import {
-  CssBaseline,
-  Typography,
-  Container,
-  TextField,
-} from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
 import FirstContainer from "../Containers/FirstContainer";
 import SecondContainer from "../Containers/SecondContainer";
+import Newsletter from "../Containers/Newsletter";
 import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
 export default function Body() {
@@ -24,35 +20,7 @@ export default function Body() {
       <TrustBadgeContainer />
 
       {/* Fourth container */}
-      <Container
-        disableGutters={true}
-        maxWidth="xl"
-        style={{ backgroundColor: "#FFF0E5", height: "80vh" }}
-      >
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#F0F5EF", height: "80vh" }}
-          variant="h3"
-          gutterBottom
-        >
-          Newsletter
-          <Typography
-            component="div"
-            style={{ backgroundColor: "#F0F5EF", height: "80vh" }}
-            variant="subtitle1"
-          >
-            Join us now! It's free!
-            <form noValidate autoComplete="off">
-              <TextField
-                id="filled-secondary"
-                label="email"
-                variant="filled"
-                color="secondary"
-              />
-            </form>
-          </Typography>
-        </Typography>
-      </Container>
+      <Newsletter />
     </section>
   );
 }
