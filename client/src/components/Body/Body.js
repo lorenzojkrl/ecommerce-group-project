@@ -6,7 +6,7 @@ import SecondContainer from "../Containers/SecondContainer";
 import Newsletter from "../Containers/Newsletter";
 import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
-export default function Body() {
+function Body() {
   return (
     <section>
       <CssBaseline />
@@ -24,3 +24,5 @@ export default function Body() {
     </section>
   );
 }
+
+export default Body;
