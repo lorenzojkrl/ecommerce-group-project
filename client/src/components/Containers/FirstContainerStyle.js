@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 2,
     [theme.breakpoints.between("xs", "sm")]: {
       textAlign: "center",
-      top: "10vh",
+      top: "14vh",
       right: "15vw",
     },
   },
