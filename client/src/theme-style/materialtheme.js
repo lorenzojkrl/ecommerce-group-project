@@ -10,7 +10,7 @@ const Theme = ({children}) => {
         },
         typography: {
             fontFamily: ['"Roboto"'],
-            fontSize: 14,
+            fontSize: 11,
             h2: {
                 fontWeight: 750
             }
