@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     color: "#2F1160",
-    letterSpacing: 2,
+    letterSpacing: 1,
   },
   first_container: {
     backgroundColor: "#FFF0E5",
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 2,
     [theme.breakpoints.between("xs", "sm")]: {
       textAlign: "center",
-      top: "15vh",
+      top: "10vh",
       right: "15vw",
     },
   },
