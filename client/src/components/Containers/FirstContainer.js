@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid, Box, Typography } from "@material-ui/core";
-import useStyles from "./FirstContainerStyle";
+import useStyles from "./FirstContainerStyles";
 import MacBook from "../../assets/images/MacBook.svg";
 
 function FirstContainer() {

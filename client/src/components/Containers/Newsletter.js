@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Container, TextField, Grid } from "@material-ui/core";
-import useStyles from "./NewsletterStyle";
+import useStyles from "./NewsletterStyles";
 import Mailing from "../../assets/images/Mailing.svg";
 
 function Newsletter() {
