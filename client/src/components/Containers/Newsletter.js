@@ -23,13 +23,14 @@ function Newsletter() {
       <Grid container direction="column" alignItems="center" justify="center">
         <Grid item xs>
           <Grid item xs={13} sm={6}>
-            <img src={Mailing} alt="macbook" width="150" />
+            <img src={Mailing} alt="macbook" width="180" />
           </Grid>
 
           <form noValidate autoComplete="off">
             <TextField
               id="filled-secondary"
-              label="email"
+              label="Your Email"
+              placeholder="Enter your email here"
               variant="filled"
               color="secondary"
             />
