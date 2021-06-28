@@ -7,7 +7,7 @@ function FirstContainer() {
   const classes = useStyles(useStyles);
 
   return (
-      <Grid className={classes.first_container} container alignItems="center" spacing={2} direction="row">
+      <Grid className={classes.first_container} container alignItems="center" spacing={5} direction="row">
         <Grid item xs={12} sm={7} >
           <Typography color="primary" variant="h2">
             We innovate your <br /> online shopping <br /> experience

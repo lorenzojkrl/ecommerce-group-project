@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   },
   first_container: {
     backgroundColor: "#FFF0E5",
-    height: "65vh",
+    height: "75vh",
     textAlign: "center",
     [theme.breakpoints.down("sm")]: {
       height: "100%",
