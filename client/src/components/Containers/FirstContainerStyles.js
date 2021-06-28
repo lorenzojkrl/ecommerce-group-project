@@ -2,38 +2,28 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    color: "#2F1160",
-    letterSpacing: 1,
+    // letterSpacing: 1,
   },
   first_container: {
     backgroundColor: "#FFF0E5",
     height: "65vh",
     textAlign: "center",
-  },
-  box_in_first_container: {
-    position: "absolute",
-    top: "20vh",
-    left: "15vw",
-    lineHeight: 1,
-    margin: 2,
-    [theme.breakpoints.between("xs", "sm")]: {
-      textAlign: "center",
-      top: "14vh",
-      right: "15vw",
+    [theme.breakpoints.down("sm")]: {
+      height: "100%",
+      paddingTop: "10vh",
+      paddingBottom: "10vh"
     },
   },
+  box_in_first_container: {
+  },
   subtitle_1: {
-    color: "#2F1160",
-    letterSpacing: 1,
+    // letterSpacing: 1,
   },
   display_macbook: {
-    position: "absolute",
-    top: "22vh",
-    left: "60vw",
-    textAlign: "right",
-    margin: 1,
-    [theme.breakpoints.between("xs", "sm")]: {
-      display: "none",
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      // display: "none",
+      width: "calc(100% - 5em)"
     },
   },
 }));
