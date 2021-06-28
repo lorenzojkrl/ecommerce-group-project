@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 import { getAll } from '../../services/book';
 
 // import axios from 'axios'; // Uncommented for a moment
-import { Theme } from '../../theme-style/materialtheme'
+import { Theme } from '../../theme-style/materialTheme';
 
 function App() {
   // You may want to save fetched data into a state
