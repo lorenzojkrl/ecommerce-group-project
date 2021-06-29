@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   first_container: {
     backgroundColor: "#FFF0E5",
-    height: "75vh",
+    height: "min(75vh, 1080px)",
     textAlign: "center",
     [theme.breakpoints.down("md")]: {
       height: "min(75vh, 500px)",
