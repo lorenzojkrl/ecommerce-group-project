@@ -7,21 +7,27 @@ function SecondContainer() {
   const classes = useStyles(useStyles);
 
   return (
-    <Container
-      className={classes.second_container}
-      maxWidth={true}
-      component="div"
-    >
-      <Grid container>
+    // <Container
+    //   className={classes.second_container}
+    //   maxWidth={true}
+    //   component="div"
+    // >
+      <Grid 
+      container 
+      className={classes.second_container} 
+      alignItems="center"
+      justify="center"
+      direction="row">
         <Grid item xs={12} sm={5}>
-          <Box component="span" p={4} className={classes.display_shopping}>
-            <img src={OnlineShopping} alt="macbook" width="300" />
-          </Box>
+          {/* <Box component="span" p={4} className={classes.display_shopping}> */}
+            <img src={OnlineShopping} alt="macbook" width="300" height="auto" />
+          {/* </Box> */}
         </Grid>
 
         <br />
 
-        <Grid item xs={12} sm={5} className={classes.grid_typography}>
+        <Grid item xs={12} sm={5} > 
+        {/* className={classes.grid_typography}> */}
           <Typography variant="h3">Shop with ease</Typography>
 
           <br />
@@ -40,8 +46,9 @@ function SecondContainer() {
             </Typography>
           </Button>
         </Grid>
+
       </Grid>
-    </Container>
+    // </Container>
   );
 }
 

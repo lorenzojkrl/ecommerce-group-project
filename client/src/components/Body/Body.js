@@ -8,7 +8,7 @@ import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
 
 function Body() {
   return (
-    <section>
+    <main >
       <CssBaseline />
       {/* First container */}
       <FirstContainer />
@@ -21,7 +21,7 @@ function Body() {
 
       {/* Fourth container */}
       <Newsletter />
-    </section>
+    </main>
   );
 }
 
