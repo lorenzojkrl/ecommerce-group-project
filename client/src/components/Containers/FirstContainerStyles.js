@@ -1,9 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    // letterSpacing: 1,
-  },
   first_container: {
     backgroundColor: "#FFF0E5",
     height: "75vh",
@@ -13,11 +10,6 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: "10vh",
       paddingBottom: "10vh"
     },
-  },
-  box_in_first_container: {
-  },
-  subtitle_1: {
-    // letterSpacing: 1,
   },
   display_macbook: {
     width: "100%",
