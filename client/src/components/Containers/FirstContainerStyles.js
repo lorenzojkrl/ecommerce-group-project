@@ -5,8 +5,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFF0E5",
     height: "75vh",
     textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      height: "min(75vh, 500px)",
+    },
     [theme.breakpoints.down("xs")]: {
-      height: "90vh",
+      height: "80vh",
     },
   },
   display_macbook: {
