@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     height: "65vh",
     [theme.breakpoints.between("xs", "sm")]: {
       textAlign: "center",
-      height: "100%"
+      height: "min(75vh, 500px)",
     },
   },
   display_shopping: {
