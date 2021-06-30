@@ -3,6 +3,7 @@ import { useStyles } from "./TrustBadgeContainerStyles";
 
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
+
   return (
     <Grid
       className={classes.root}

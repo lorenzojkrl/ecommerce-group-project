@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     height: "65vh",
     [theme.breakpoints.down("sm")]: {
       height: "100%",
-      paddingBottom: "10vh",
+      padding: 20,
     },
     textAlign: "center",
   },
