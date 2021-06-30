@@ -9,25 +9,6 @@ const useStyles = makeStyles((theme) => ({
       height: "min(75vh, 500px)",
     },
   },
-  display_shopping: {
-    // position: "relative",
-    // left: "15vw",
-    // top: "15vh",
-    // [theme.breakpoints.between("xs", "sm")]: {
-    //   left: "1vw",
-    //   top: "2vh",
-    // },
-  },
-  grid_typography: {
-    // position: "relative",
-    // left: "15vw",
-    // top: "15vh",
-    // color: "#2B3C2A",
-    // [theme.breakpoints.between("xs", "sm")]: {
-    //   left: "1vw",
-    //   top: "5vh",
-    // },
-  },
 }));
 
 export default useStyles;
