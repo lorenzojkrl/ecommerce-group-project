@@ -1,25 +1,25 @@
-import React from 'react'
-import { Grid, Typography, Card, CardMedia } from "@material-ui/core";
-import { useStyles } from "./TrustBadgeContainerStyles";
+import React from 'react';
+import { Grid, Typography, Card, CardMedia } from '@material-ui/core';
+import { useStyles } from './TrustBadgeContainerStyles';
 
 const defaultTestimonials = [
   {
-    name: "Craig Norford",
-    src: "https://avatars.githubusercontent.com/u/73719327?v=4"
+    name: 'Craig Norford',
+    src: 'https://avatars.githubusercontent.com/u/73719327?v=4',
   },
   {
-    name: "Eugene Gohh",
-    src: "https://avatars.githubusercontent.com/u/64187129?v=4"
+    name: 'Eugene Gohh',
+    src: 'https://avatars.githubusercontent.com/u/64187129?v=4',
   },
   {
-    name: "Torey Littlefield",
-    src: "https://avatars.githubusercontent.com/u/52614742?v=4"
+    name: 'Torey Littlefield',
+    src: 'https://avatars.githubusercontent.com/u/52614742?v=4',
   },
   {
-    name: "Lorenzo Zarantonello",
-    src: "https://avatars.githubusercontent.com/u/18583152?v=4"
-  }
-]
+    name: 'Lorenzo Zarantonello',
+    src: 'https://avatars.githubusercontent.com/u/18583152?v=4',
+  },
+];
 
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
@@ -56,8 +56,8 @@ const TrustBadgeContainer = () => {
         spacing={3}
       >
         {/* Map Over Grid Item & Testimonials */}
-        {testimonials.map(testimonial => (
-          <Grid key={testimonial.name.replace(' ','')} item md={3} sm={6} xs={12}>
+        {testimonials.map((testimonial) => (
+          <Grid key={testimonial.name.replace(' ', '')} item md={3} sm={6} xs={12}>
             <Card classes={{ root: classes.card }}>
               <CardMedia
                 className={classes.media}
@@ -75,4 +75,4 @@ const TrustBadgeContainer = () => {
   );
 };
 
-export { TrustBadgeContainer };
+export { TrustBadgeContainer as default };
