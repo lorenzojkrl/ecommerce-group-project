@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid, Typography, Card, CardMedia, useMediaQuery } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './TrustBadgeContainerStyles';
@@ -24,10 +24,35 @@ const defaultTestimonials = [
 
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
-  const [testimonials, useTestimonials] = React.useState(defaultTestimonials);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('xs'));
-  console.log({ matches });
+  const [testimonials, setTestimonials] = useState(
+    matches ? [defaultTestimonials[0]] : defaultTestimonials,
+  );
+  const [active, setActive] = useState(0);
+
+  const changeActive = () => {
+    if (!matches) return;
+    const nextValue = active + 1 >= defaultTestimonials.length ? 0 : active + 1;
+    setTestimonials([defaultTestimonials[nextValue]]);
+    setActive(nextValue);
+  };
+
+  useEffect(() => {
+    if (!matches) {
+      setTestimonials(defaultTestimonials);
+      return;
+    }
+    const timer = setTimeout(() => {
+      const nextValue = active + 1 >= defaultTestimonials.length ? 0 : active + 1;
+      setTestimonials([defaultTestimonials[nextValue]]);
+      setActive(nextValue);
+    }, 3500);
+    // eslint-disable-next-line consistent-return
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [matches, active]);
 
   return (
     <Grid
@@ -61,7 +86,14 @@ const TrustBadgeContainer = () => {
       >
         {/* Map Over Grid Item & Testimonials */}
         {testimonials.map((testimonial) => (
-          <Grid key={testimonial.name.replace(' ', '')} item md={3} sm={6} xs={12}>
+          <Grid
+            onClick={changeActive}
+            key={testimonial.name.replace(' ', '')}
+            item
+            md={3}
+            sm={6}
+            xs={12}
+          >
             <Card classes={{ root: classes.card }}>
               <CardMedia
                 className={classes.media}

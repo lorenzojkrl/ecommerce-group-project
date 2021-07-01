@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#FFF0E5',
-    height: '65vh',
+    height: 'min(55vh, 400px)',
     [theme.breakpoints.down('sm')]: {
-      height: '100%',
+      height: 'min(65vh, 300px)',
       padding: 20,
     },
     textAlign: 'center',
