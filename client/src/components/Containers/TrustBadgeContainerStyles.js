@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#FFF0E5',
-    height: 'min(55vh, 400px)',
+    height: 'min(55vh, 500px)',
     [theme.breakpoints.down('sm')]: {
-      height: 'min(65vh, 300px)',
+      height: 'min(65vh, 600px)',
       padding: 20,
     },
     textAlign: 'center',
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   cardGrid: {
-    // overflowX: "hidden"
+    // overflowX: 'hidden',
   },
   media: {
     height: 102,
