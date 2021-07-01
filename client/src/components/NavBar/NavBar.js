@@ -1,7 +1,8 @@
-import React from "react";
-import { Menu, ChevronLeft, ChevronRight } from "@material-ui/icons";
-import clsx from "clsx";
-import { useTheme } from "@material-ui/core/styles";
+import React from 'react';
+import { Menu, ChevronLeft, ChevronRight } from '@material-ui/icons';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import clsx from 'clsx';
+import { useTheme } from '@material-ui/core/styles';
 import {
   Drawer,
   CssBaseline,
@@ -14,8 +15,8 @@ import {
   ListItem,
   ListItemText,
   Button,
-} from "@material-ui/core";
-import useStyles from "./NavBarStyles";
+} from '@material-ui/core';
+import useStyles from './NavBarStyles';
 
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
@@ -39,7 +40,7 @@ export default function PersistentDrawerLeft() {
             [classes.appBarShift]: open,
           }) && classes.root
         }
-        style={{ position: "relative" }}
+        style={{ position: 'relative' }}
       >
         <Toolbar>
           <IconButton
@@ -80,12 +81,12 @@ export default function PersistentDrawerLeft() {
         >
           <div className={classes.drawerHeader}>
             <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "ltr" ? <ChevronLeft /> : <ChevronRight />}
+              {theme.direction === 'ltr' ? <ChevronLeft /> : <ChevronRight />}
             </IconButton>
           </div>
           <Divider />
           <List>
-            {["About", "Contact", "Sign Up", "Login"].map((text) => (
+            {['About', 'Contact', 'Sign Up', 'Login'].map((text) => (
               <ListItem button key={text}>
                 <ListItemText primary={text} />
               </ListItem>

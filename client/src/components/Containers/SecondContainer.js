@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid, Typography, Button } from "@material-ui/core";
-import useStyles from "./SecondContainerStyles";
-import OnlineShopping from "../../assets/images/online-shopping-concept.svg";
+import React from 'react';
+import { Grid, Typography, Button } from '@material-ui/core';
+import useStyles from './SecondContainerStyles';
+import OnlineShopping from '../../assets/images/online-shopping-concept.svg';
 
 function SecondContainer() {
   const classes = useStyles(useStyles);
@@ -27,8 +27,8 @@ function SecondContainer() {
 
         <Typography variant="subtitle1">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          blanditiis asperiores quisquam ab quidem accusantium deserunt ipsa
-          earum nihil tempora?
+          blanditiis asperiores quisquam ab quidem accusantium deserunt ipsa earum
+          nihil tempora?
         </Typography>
 
         <br />

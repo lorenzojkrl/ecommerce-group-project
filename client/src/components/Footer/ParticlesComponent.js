@@ -1,4 +1,5 @@
-import Particles from "react-tsparticles";
+import React from 'react';
+import Particles from 'react-tsparticles';
 
 function ParticlesComponent() {
   return (
@@ -7,25 +8,25 @@ function ParticlesComponent() {
       id="tsparticles"
       height="65vh"
       style={{
-        position: "absolute",
+        position: 'absolute',
       }}
       options={{
         background: {
           color: {
-            value: "#8C30F5",
+            value: '#8C30F5',
           },
         },
         fpsLimit: 60,
         interactivity: {
-          detectsOn: "canvas",
+          detectsOn: 'canvas',
           events: {
             onClick: {
               enable: true,
-              mode: "grab",
+              mode: 'grab',
             },
             onHover: {
               enable: true,
-              mode: "grab",
+              mode: 'grab',
             },
             resize: true,
           },
@@ -47,10 +48,10 @@ function ParticlesComponent() {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: '#ffffff',
           },
           links: {
-            color: "#ffffff",
+            color: '#ffffff',
             distance: 190,
             enable: true,
             opacity: 0.5,
@@ -60,9 +61,9 @@ function ParticlesComponent() {
             enable: true,
           },
           move: {
-            direction: "none",
+            direction: 'none',
             enable: true,
-            outMode: "bounce",
+            outMode: 'bounce',
             random: false,
             speed: 1,
             straight: false,
@@ -78,7 +79,7 @@ function ParticlesComponent() {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             random: true,

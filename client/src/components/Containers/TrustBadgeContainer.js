@@ -1,6 +1,7 @@
 import React from 'react';
-import { Grid, Typography, Card, CardMedia } from '@material-ui/core';
-import { useStyles } from './TrustBadgeContainerStyles';
+import { Grid, Typography, Card, CardMedia, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import useStyles from './TrustBadgeContainerStyles';
 
 const defaultTestimonials = [
   {
@@ -24,6 +25,9 @@ const defaultTestimonials = [
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
   const [testimonials, useTestimonials] = React.useState(defaultTestimonials);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('xs'));
+  console.log({ matches });
 
   return (
     <Grid
@@ -75,4 +79,4 @@ const TrustBadgeContainer = () => {
   );
 };
 
-export { TrustBadgeContainer as default };
+export default TrustBadgeContainer;

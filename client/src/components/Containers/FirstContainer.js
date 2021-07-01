@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import useStyles from "./FirstContainerStyles";
-import MacBook from "../../assets/images/MacBook.svg";
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import useStyles from './FirstContainerStyles';
+import MacBook from '../../assets/images/MacBook.svg';
 
 function FirstContainer() {
   const classes = useStyles(useStyles);

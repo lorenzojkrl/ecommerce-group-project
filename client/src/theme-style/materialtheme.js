@@ -1,15 +1,16 @@
+import React from 'react';
 import {
   createMuiTheme,
   ThemeProvider,
   responsiveFontSizes,
   MuiThemeProvider,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-const Theme = ({ children }) => {
+const Theme = ({ children = {} }) => {
   let theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#2F1160",
+        main: '#2F1160',
       },
     },
     typography: {
@@ -25,11 +26,9 @@ const Theme = ({ children }) => {
 
   return (
     <MuiThemeProvider theme={theme}>
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </MuiThemeProvider>
   );
 };
 
-export { Theme };
+export default Theme;

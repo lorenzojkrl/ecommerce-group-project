@@ -1,16 +1,16 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
-import ParticlesComponent from "./ParticlesComponent";
-import useStyles from "./FooterStyles";
-import { Grid, Link, Typography } from "@material-ui/core";
-import { AiFillFacebook, AiFillGithub, AiFillYoutube } from "react-icons/ai";
+import React from 'react';
+import Container from '@material-ui/core/Container';
+import { Grid, Link, Typography } from '@material-ui/core';
+import { AiFillFacebook, AiFillGithub, AiFillYoutube } from 'react-icons/ai';
+import ParticlesComponent from './ParticlesComponent';
+import useStyles from './FooterStyles';
 
 function Footer() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Container disableGutters={true} maxWidth={true}>
+      <Container disableGutters maxWidth>
         <Grid container spacing={0}>
           <ParticlesComponent />
 
@@ -26,31 +26,31 @@ function Footer() {
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   First link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Second link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Third link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fourth link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fifth link
                 </Link>
               </Typography>
@@ -65,31 +65,31 @@ function Footer() {
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   First link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Second link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Third link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fourth link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fifth link
                 </Link>
               </Typography>
@@ -104,31 +104,31 @@ function Footer() {
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   First link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Second link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Third link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fourth link
                 </Link>
               </Typography>
 
               <Typography display="block" gutterBottom>
-                <Link component="button" variant="body2">
+                <Link href="#footer" component="button" variant="body2">
                   Fifth link
                 </Link>
               </Typography>
