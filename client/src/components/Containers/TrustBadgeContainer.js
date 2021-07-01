@@ -1,8 +1,29 @@
+import React from 'react'
 import { Grid, Typography, Card, CardMedia } from "@material-ui/core";
 import { useStyles } from "./TrustBadgeContainerStyles";
 
+const defaultTestimonials = [
+  {
+    name: "Craig Norford",
+    src: "https://avatars.githubusercontent.com/u/73719327?v=4"
+  },
+  {
+    name: "Eugene Gohh",
+    src: "https://avatars.githubusercontent.com/u/64187129?v=4"
+  },
+  {
+    name: "Torey Littlefield",
+    src: "https://avatars.githubusercontent.com/u/52614742?v=4"
+  },
+  {
+    name: "Lorenzo Zarantonello",
+    src: "https://avatars.githubusercontent.com/u/18583152?v=4"
+  }
+]
+
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
+  const [testimonials, useTestimonials] = React.useState(defaultTestimonials);
 
   return (
     <Grid
@@ -34,54 +55,21 @@ const TrustBadgeContainer = () => {
         xs={12}
         spacing={3}
       >
-        <Grid item md={3} sm={6} xs={12}>
-          <Card classes={{ root: classes.card }}>
-            <CardMedia
-              className={classes.media}
-              image="https://avatars.githubusercontent.com/u/73719327?v=4"
-              title="Craig Norford"
-            />
-            <Typography variant="h6" align="center">
-              Craig Norford
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item md={3} sm={6} xs={12}>
-          <Card classes={{ root: classes.card }}>
-            <CardMedia
-              className={classes.media}
-              title="Eugene Gohh"
-              image="https://avatars.githubusercontent.com/u/64187129?v=4"
-            />
-            <Typography variant="h6" align="center">
-              Eugene Gohh
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item md={3} sm={6} xs={12}>
-          <Card classes={{ root: classes.card }}>
-            <CardMedia
-              className={classes.media}
-              title="Torey Littlefield"
-              image="https://avatars.githubusercontent.com/u/52614742?v=4"
-            />
-            <Typography variant="h6" align="center">
-              Torey Littlefield
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item md={3} sm={6} xs={12}>
-          <Card classes={{ root: classes.card }}>
-            <CardMedia
-              className={classes.media}
-              title="Lorenzo Zarantonello"
-              image="https://avatars.githubusercontent.com/u/18583152?v=4"
-            />
-            <Typography variant="h6" align="center">
-              Lorenzo Zarantonello
-            </Typography>
-          </Card>
-        </Grid>
+        {/* Map Over Grid Item & Testimonials */}
+        {testimonials.map(testimonial => (
+          <Grid key={testimonial.name.replace(' ','')} item md={3} sm={6} xs={12}>
+            <Card classes={{ root: classes.card }}>
+              <CardMedia
+                className={classes.media}
+                image={testimonial.src}
+                title={testimonial.name}
+              />
+              <Typography variant="h6" align="center">
+                {testimonial.name}
+              </Typography>
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );
