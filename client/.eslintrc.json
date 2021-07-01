@@ -2,12 +2,6 @@
     "extends": ["airbnb", "airbnb/hooks", "prettier"],
     "plugins": ["prettier"],
     "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "endOfLine": "auto"
-        }
-      ],
       "no-unused-vars": "warn",
       "no-console": "warn",
       "func-names": "off",
