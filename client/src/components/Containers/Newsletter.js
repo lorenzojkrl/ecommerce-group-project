@@ -13,7 +13,7 @@ function Newsletter() {
       </Typography>
 
       <Typography variant="h6" className={classes.subtitle_1}>
-        Come join us, it&#39; free!
+        Come join us, it&apos;s free!
       </Typography>
 
       <Grid container direction="column" alignItems="center" justify="center">
