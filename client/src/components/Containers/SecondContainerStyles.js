@@ -4,9 +4,9 @@ const useStyles = makeStyles((theme) => ({
   second_container: {
     backgroundColor: 'grey.300',
     height: '65vh',
-    [theme.breakpoints.between('xs', 'sm')]: {
+    [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
-      height: 'min(75vh, 500px)',
+      height: 'min(100vh, 700px)',
     },
   },
 }));
