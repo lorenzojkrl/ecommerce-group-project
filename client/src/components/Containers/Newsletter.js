@@ -7,7 +7,7 @@ function Newsletter() {
   const classes = useStyles(useStyles);
 
   return (
-    <Container disableGutters maxWidth className={classes.fourth_container}>
+    <Container disableGutters className={classes.fourth_container}>
       <Typography className={classes.root} variant="h2" gutterBottom>
         Newsletter
       </Typography>
@@ -18,7 +18,7 @@ function Newsletter() {
 
       <Grid container direction="column" alignItems="center" justify="center">
         <Grid item xs>
-          <Grid item xs={13} sm={6}>
+          <Grid item xs={12} sm={6}>
             <img src={Mailing} alt="macbook" width="180" />
           </Grid>
 
