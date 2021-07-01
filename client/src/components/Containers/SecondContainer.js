@@ -14,8 +14,9 @@ function SecondContainer() {
       justify="center"
       direction="row"
     >
-      <Grid item xs={12} sm={5}>
-        <img src={OnlineShopping} alt="macbook" width="300" height="auto" />
+      {/* @EugeneGohh needs a class with some custom css to keep the image looking good when screen size changes */}
+      <Grid item xs={12} sm={5} style={{ textAlign: 'center' }}>
+        <img src={OnlineShopping} alt="macbook" width="100%" height="250" />
       </Grid>
 
       <br />
