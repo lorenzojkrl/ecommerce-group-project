@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <div className={classes.root}>
-      <Container disableGutters maxWidth>
+      <Container maxWidth={false} disableGutters>
         <Grid container spacing={0}>
           <ParticlesComponent />
 

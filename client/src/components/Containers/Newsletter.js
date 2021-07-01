@@ -7,7 +7,7 @@ function Newsletter() {
   const classes = useStyles(useStyles);
 
   return (
-    <Container disableGutters className={classes.fourth_container}>
+    <Container disableGutters maxWidth={false} className={classes.fourth_container}>
       <Typography className={classes.root} variant="h2" gutterBottom>
         Newsletter
       </Typography>
