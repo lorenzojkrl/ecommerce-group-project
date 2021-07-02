@@ -3,9 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#FFF0E5',
-    height: 'min(55vh, 500px)',
+    height: 'min(70vh, 600px)',
     [theme.breakpoints.down('sm')]: {
-      height: 'min(65vh, 600px)',
+      height: 'min(80vh, 500px)',
+      padding: 20,
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: 'min(80vh, 350px)',
       padding: 20,
     },
     textAlign: 'center',

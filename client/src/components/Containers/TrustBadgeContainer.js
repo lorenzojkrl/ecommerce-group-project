@@ -41,7 +41,9 @@ const defaultTestimonials = [
 const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down('xs'));
+  const mobile = useMediaQuery(theme.breakpoints.down('xs'));
+  const tablet = useMediaQuery(theme.breakpoints.down('sm'));
+
   // const [testimonials, setTestimonials] = useState(defaultTestimonials);
   const testimonials = defaultTestimonials;
   const [active, setActive] = useState({
@@ -64,7 +66,7 @@ const TrustBadgeContainer = () => {
   };
 
   const changeActive = () => {
-    if (!matches) return;
+    if (!mobile) return;
     const timer = setTimeout(() => {
       const nextValue = next + 1 >= defaultTestimonials.length ? 0 : next + 1;
       setActive({ next: nextValue, prev: next });
@@ -76,7 +78,7 @@ const TrustBadgeContainer = () => {
   };
 
   useEffect(() => {
-    if (!matches) return;
+    if (!mobile) return;
     const timer = setTimeout(() => {
       const nextValue = next + 1 >= defaultTestimonials.length ? 0 : next + 1;
       setActive({ next: nextValue, prev: next });
@@ -85,7 +87,7 @@ const TrustBadgeContainer = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [matches, next]);
+  }, [mobile, next]);
 
   return (
     <Grid
@@ -121,9 +123,9 @@ const TrustBadgeContainer = () => {
         {testimonials.map((testimonial, idx) => (
           <Slide
             direction={next === idx ? 'left' : 'right'}
-            in={matches ? next === idx : true}
-            style={matches ? transitionSlide(idx) : ''}
-            timeout={matches ? { enter: 800, exit: 600 } : 0}
+            in={mobile ? next === idx : true}
+            style={mobile ? transitionSlide(idx) : ''}
+            timeout={mobile ? { enter: 800, exit: 600 } : 0}
           >
             <Grid
               onClick={changeActive}
@@ -148,14 +150,14 @@ const TrustBadgeContainer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <AiFillGithub color="black" size={20} />
+                    <AiFillGithub color="black" size={tablet ? 20 : 35} />
                   </a>
                   <a
                     href={testimonial.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <AiFillLinkedin color="black" size={20} />
+                    <AiFillLinkedin color="black" size={tablet ? 20 : 35} />
                   </a>
                 </span>
               </Card>
