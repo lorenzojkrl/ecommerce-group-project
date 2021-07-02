@@ -36,10 +36,15 @@ const TrustBadgeContainer = () => {
   const [testimonials, setTestimonials] = useState(defaultTestimonials);
   const [active, setActive] = useState(0);
 
-  const transitionSlide = (act, idx) =>
-    act === idx
-      ? { maxWidth: '100%', position: 'absolute' }
-      : { position: 'absolute' };
+  const transitionSlide = (act, idx) => {
+    if (act === idx) {
+      return { position: 'absolute', transitionTimingFunction: 'linear' };
+    }
+    return {
+      position: 'absolute',
+      transitionTimingFunction: 'linear',
+    };
+  };
 
   const changeActive = () => {
     if (!matches) return;
@@ -49,10 +54,7 @@ const TrustBadgeContainer = () => {
   };
 
   useEffect(() => {
-    if (!matches) {
-      setTestimonials(defaultTestimonials);
-      return;
-    }
+    if (!matches) return;
     const timer = setTimeout(() => {
       const nextValue = active + 1 >= defaultTestimonials.length ? 0 : active + 1;
       setActive(nextValue);
@@ -98,10 +100,10 @@ const TrustBadgeContainer = () => {
           <Slide
             direction={active === idx ? 'left' : 'right'}
             in={matches ? active === idx : true}
-            mountOnEnter
-            unmountOnExit
+            // mountOnEnter
+            // unmountOnExit
             style={matches ? transitionSlide(active, idx) : ''}
-            timeout={matches ? { enter: 2500, exit: 2500 } : 0}
+            timeout={matches ? { enter: 800, exit: 600 } : 0}
           >
             <Grid
               onClick={changeActive}
