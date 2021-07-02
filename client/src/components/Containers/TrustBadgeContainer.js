@@ -34,36 +34,48 @@ const TrustBadgeContainer = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('xs'));
   const [testimonials, setTestimonials] = useState(defaultTestimonials);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState({
+    next: 0,
+    prev: testimonials.length - 1,
+  });
+  const { next, prev } = active;
 
-  const transitionSlide = (act, idx) => {
-    if (act === idx) {
+  const transitionSlide = (idx) => {
+    if (next === idx) {
       return { position: 'absolute', transitionTimingFunction: 'linear' };
     }
-    return {
-      position: 'absolute',
-      transitionTimingFunction: 'linear',
-    };
+    if (prev === idx) {
+      return {
+        position: 'absolute',
+        transitionTimingFunction: 'linear',
+      };
+    }
+    return { visibility: 'hidden' };
   };
 
   const changeActive = () => {
     if (!matches) return;
-    const nextValue = active + 1 >= defaultTestimonials.length ? 0 : active + 1;
-    setActive(nextValue);
-    transitionSlide();
+    const timer = setTimeout(() => {
+      const nextValue = next + 1 >= defaultTestimonials.length ? 0 : next + 1;
+      setActive({ next: nextValue, prev: next });
+    }, 300);
+    // eslint-disable-next-line consistent-return
+    return () => {
+      clearTimeout(timer);
+    };
   };
 
   useEffect(() => {
     if (!matches) return;
     const timer = setTimeout(() => {
-      const nextValue = active + 1 >= defaultTestimonials.length ? 0 : active + 1;
-      setActive(nextValue);
+      const nextValue = next + 1 >= defaultTestimonials.length ? 0 : next + 1;
+      setActive({ next: nextValue, prev: next });
     }, 4000);
     // eslint-disable-next-line consistent-return
     return () => {
       clearTimeout(timer);
     };
-  }, [matches, active]);
+  }, [matches, next]);
 
   return (
     <Grid
@@ -98,11 +110,9 @@ const TrustBadgeContainer = () => {
         {/* Map Over Grid Item & Testimonials */}
         {testimonials.map((testimonial, idx) => (
           <Slide
-            direction={active === idx ? 'left' : 'right'}
-            in={matches ? active === idx : true}
-            // mountOnEnter
-            // unmountOnExit
-            style={matches ? transitionSlide(active, idx) : ''}
+            direction={next === idx ? 'left' : 'right'}
+            in={matches ? next === idx : true}
+            style={matches ? transitionSlide(idx) : ''}
             timeout={matches ? { enter: 800, exit: 600 } : 0}
           >
             <Grid
