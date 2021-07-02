@@ -33,7 +33,8 @@ const TrustBadgeContainer = () => {
   const classes = useStyles(useStyles);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('xs'));
-  const [testimonials, setTestimonials] = useState(defaultTestimonials);
+  // const [testimonials, setTestimonials] = useState(defaultTestimonials);
+  const testimonials = defaultTestimonials;
   const [active, setActive] = useState({
     next: 0,
     prev: testimonials.length - 1,
