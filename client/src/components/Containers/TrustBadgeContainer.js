@@ -7,6 +7,7 @@ import {
   useMediaQuery,
   Slide,
 } from '@material-ui/core';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { useTheme } from '@material-ui/core/styles';
 import useStyles from './TrustBadgeContainerStyles';
 
@@ -14,18 +15,26 @@ const defaultTestimonials = [
   {
     name: 'Craig Norford',
     src: 'https://avatars.githubusercontent.com/u/73719327?v=4',
+    github: 'https://github.com/craig1001',
+    linkedin: 'https://www.linkedin.com/in/craig-norford-9a33838a/',
   },
   {
     name: 'Eugene Gohh',
     src: 'https://avatars.githubusercontent.com/u/64187129?v=4',
+    github: 'https://github.com/EugeneGohh',
+    linkedin: 'https://www.linkedin.com/in/eugenegohh/',
   },
   {
     name: 'Torey Littlefield',
     src: 'https://avatars.githubusercontent.com/u/52614742?v=4',
+    github: 'https://github.com/ToreyLittlefield',
+    linkedin: 'https://www.linkedin.com/in/torey-littlefield/',
   },
   {
     name: 'Lorenzo Zarantonello',
     src: 'https://avatars.githubusercontent.com/u/18583152?v=4',
+    github: 'https://github.com/lorenzojkrl',
+    linkedin: 'https://www.linkedin.com/in/lorenzo-zarantonello/',
   },
 ];
 
@@ -133,6 +142,22 @@ const TrustBadgeContainer = () => {
                 <Typography variant="h6" align="center">
                   {testimonial.name}
                 </Typography>
+                <span>
+                  <a
+                    href={testimonial.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillGithub color="black" size={20} />
+                  </a>
+                  <a
+                    href={testimonial.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillLinkedin color="black" size={20} />
+                  </a>
+                </span>
               </Card>
             </Grid>
           </Slide>
