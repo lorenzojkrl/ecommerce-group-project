@@ -26,11 +26,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   iconbutton: {
-    opacity: 0.7,
+    opacity: 0.75,
+    color: theme.palette.text.primary,
     transition: 'transform 300ms ease-in-out',
     '&:hover': {
       transform: 'scale3d(1.1, 1.1, 1)',
       opacity: 0.85,
+      color: theme.palette.primary.main,
     },
   },
 }));

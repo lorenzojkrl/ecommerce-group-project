@@ -22,7 +22,6 @@ const CarouselItem = ({ testimonial = {}, tablet = false }) => {
           href={testimonial.github}
           target="_blank"
           rel="noopener noreferrer"
-          color="primary"
         >
           <AiFillGithub size={tablet ? 25 : 30} />
         </IconButton>
@@ -32,7 +31,6 @@ const CarouselItem = ({ testimonial = {}, tablet = false }) => {
           href={testimonial.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          color="primary"
         >
           <AiFillLinkedin size={tablet ? 25 : 30} />
         </IconButton>
