@@ -55,10 +55,11 @@ const Carousel = ({ testimonials = [] }) => {
           onClick={changeActive}
           direction={next === idx ? 'left' : 'right'}
           in={mobile ? next === idx : true}
-          style={mobile ? transitionSlide(idx) : ''}
+          style={mobile ? transitionSlide(idx) : {}}
           timeout={mobile ? { enter: 800, exit: 600 } : 0}
+          key={testimonial.name.replace(' ', '')}
         >
-          <Grid key={testimonial.name.replace(' ', '')} item md={3} sm={6} xs={12}>
+          <Grid item md={3} sm={6} xs={12}>
             <CarouselItem testimonial={testimonial} tablet={tablet} />
           </Grid>
         </Slide>
