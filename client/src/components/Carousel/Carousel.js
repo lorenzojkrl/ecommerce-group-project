@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Slide, Grid, useMediaQuery } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
 import CarouselItem from './CarouselItem';
 
 const Carousel = ({ testimonials = [] }) => {
-  const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down('xs'));
-  const tablet = useMediaQuery(theme.breakpoints.down('sm'));
+  const mobile = useMediaQuery((theme) => theme.breakpoints.down('xs'));
+  const tablet = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [active, setActive] = useState({
     next: 0,
     prev: testimonials.length - 1,
