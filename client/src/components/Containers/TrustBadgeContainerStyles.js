@@ -14,22 +14,6 @@ const useStyles = makeStyles((theme) => ({
     },
     textAlign: 'center',
   },
-  card: {
-    boxShadow: 'none',
-    backgroundColor: 'inherit',
-    overflow: 'hidden',
-    display: 'inline-flex',
-    flexFlow: 'column',
-    alignItems: 'center',
-  },
-  cardGrid: {
-    // overflowX: 'hidden',
-  },
-  media: {
-    height: 102,
-    width: 102,
-    borderRadius: '50%',
-  },
 }));
 
 export default useStyles;
