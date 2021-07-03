@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     boxShadow: 'none',
     backgroundColor: 'inherit',
@@ -8,6 +8,10 @@ const useStyles = makeStyles(() => ({
     display: 'inline-flex',
     flexFlow: 'column',
     alignItems: 'center',
+    transition: 'transform 300ms ease-in-out',
+    '&:hover': {
+      transform: 'scale3d(1.1, 1.1, 1)',
+    },
   },
   cardGrid: {
     // overflowX: 'hidden',
@@ -16,6 +20,10 @@ const useStyles = makeStyles(() => ({
     height: 102,
     width: 102,
     borderRadius: '50%',
+    [theme.breakpoints.up('lg')]: {
+      height: 125,
+      width: 125,
+    },
   },
 }));
 
