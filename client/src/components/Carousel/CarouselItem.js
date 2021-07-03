@@ -1,4 +1,4 @@
-import { Card, CardMedia, Typography } from '@material-ui/core';
+import { Card, CardMedia, Typography, IconButton } from '@material-ui/core';
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import useStyles from './CarouselStyles';
@@ -16,12 +16,26 @@ const CarouselItem = ({ testimonial = {}, tablet = false }) => {
         {testimonial.name}
       </Typography>
       <span>
-        <a href={testimonial.github} target="_blank" rel="noopener noreferrer">
-          <AiFillGithub color="black" size={tablet ? 20 : 35} />
-        </a>
-        <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer">
-          <AiFillLinkedin color="black" size={tablet ? 20 : 35} />
-        </a>
+        <IconButton
+          className={classes.iconbutton}
+          size="small"
+          href={testimonial.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          <AiFillGithub size={tablet ? 25 : 30} />
+        </IconButton>
+        <IconButton
+          className={classes.iconbutton}
+          size="small"
+          href={testimonial.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          <AiFillLinkedin size={tablet ? 25 : 30} />
+        </IconButton>
       </span>
     </Card>
   );

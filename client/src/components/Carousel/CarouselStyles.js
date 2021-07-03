@@ -8,10 +8,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-flex',
     flexFlow: 'column',
     alignItems: 'center',
-    transition: 'transform 300ms ease-in-out',
-    '&:hover': {
-      transform: 'scale3d(1.1, 1.1, 1)',
-    },
+    // transition: 'transform 300ms ease-in-out',
+    // '&:hover': {
+    //   transform: 'scale3d(1.1, 1.1, 1)',
+    // },
   },
   cardGrid: {
     // overflowX: 'hidden',
@@ -23,6 +23,14 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       height: 125,
       width: 125,
+    },
+  },
+  iconbutton: {
+    opacity: 0.7,
+    transition: 'transform 300ms ease-in-out',
+    '&:hover': {
+      transform: 'scale3d(1.1, 1.1, 1)',
+      opacity: 0.85,
     },
   },
 }));
