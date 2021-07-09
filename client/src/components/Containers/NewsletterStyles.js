@@ -1,18 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
-  root: {
+  fourth_container: {
     color: '#2F1160',
     letterSpacing: 2,
     textAlign: 'center',
-    flexGrow: 1,
-  },
-  fourth_container: {
     backgroundColor: '#F0F5EF',
-    height: '65vh',
-  },
-  subtitle_1: {
-    textAlign: 'center',
+    height: 'min(75vh, 500px)',
   },
 }));
 
