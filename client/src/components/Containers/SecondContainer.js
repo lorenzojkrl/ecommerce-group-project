@@ -15,13 +15,13 @@ function SecondContainer() {
       direction="row"
     >
       {/* @EugeneGohh needs a class with some custom css to keep the image looking good when screen size changes */}
-      <Grid item xs={12} sm={5} style={{ textAlign: 'center' }}>
+      <Grid item xs={12} sm={6} style={{ textAlign: 'center' }}>
         <img src={OnlineShopping} alt="macbook" width="100%" height="250" />
       </Grid>
 
       <br />
 
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={12} sm={6}>
         <Typography variant="h3">Shop with ease</Typography>
 
         <br />
