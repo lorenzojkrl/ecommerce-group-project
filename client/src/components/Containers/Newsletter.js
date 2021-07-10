@@ -7,21 +7,27 @@ function Newsletter() {
   const classes = useStyles(useStyles);
 
   return (
-    <Grid container className={classes.fourth_container}>
-      <Grid container direction="column" alignItems="center" justify="center">
+    <Grid
+      container
+      alignItems="center"
+      direction="row"
+      className={classes.fourth_container}
+    >
+      <Grid item xs={12} sm={6}>
         <Typography variant="h2" gutterBottom>
           Newsletter
         </Typography>
 
         <Typography variant="h6">Come join us, it&apos;s free!</Typography>
+      </Grid>
 
-        <img src={Mailing} alt="macbook" width="180" />
+      <Grid item xs={12} sm={6}>
+        <img src={Mailing} alt="macbook" height="auto" />
 
         <form noValidate autoComplete="off">
           <TextField
             id="filled-secondary"
             label="Your Email"
-            placeholder="Enter your email here"
             variant="filled"
             color="secondary"
           />
