@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import { Grid, Link, Typography } from '@material-ui/core';
+import { Grid, Link, Typography, Button } from '@material-ui/core';
 import { AiFillFacebook, AiFillGithub, AiFillYoutube } from 'react-icons/ai';
 import ParticlesComponent from './ParticlesComponent';
 import useStyles from './FooterStyles';
@@ -98,9 +98,17 @@ function Footer() {
         </Typography>
 
         <Container className={classes.icon_container}>
-          <AiFillFacebook size={42} />
-          <AiFillYoutube size={42} />
-          <AiFillGithub size={42} />
+          <Button href="#">
+            <AiFillFacebook size={40} />
+          </Button>
+
+          <Button href="#">
+            <AiFillYoutube size={40} />
+          </Button>
+
+          <Button href="#">
+            <AiFillGithub size={40} />
+          </Button>
         </Container>
       </Grid>
     </Grid>
