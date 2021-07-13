@@ -9,7 +9,12 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <Grid container direction="row" justifyContent="space-evenly">
+    <Grid
+      container
+      direction="row"
+      justifyContent="space-evenly"
+      alignItems="stretch"
+    >
       <Grid item xs={1} md={3}>
         <ParticlesComponent />
       </Grid>
