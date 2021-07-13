@@ -59,7 +59,7 @@ const Carousel = ({ testimonials = [] }) => {
           timeout={mobile ? { enter: 800, exit: 600 } : 0}
           key={testimonial.name.replace(' ', '')}
         >
-          <Grid item md={3} sm={6} xs={12}>
+          <Grid item md={3} sm={6} xs={6}>
             <CarouselItem testimonial={testimonial} tablet={tablet} />
           </Grid>
         </Slide>
