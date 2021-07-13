@@ -9,155 +9,96 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Container maxWidth={false} disableGutters>
-        <Grid container spacing={0}>
-          <ParticlesComponent />
+    <Grid container direction="row" justifyContent="space-evenly">
+      <Grid item xs={1} md={3}>
+        <ParticlesComponent />
+      </Grid>
 
-          <Grid item xs={2} className={classes.extra_grid_space}>
-            {/* Spacing here */}
-          </Grid>
+      {/* First column */}
+      <Grid item xs={3} md={2} className={classes.column}>
+        <Typography variant="button">First Column</Typography>
 
-          {/* First column */}
-          <Grid item xs={2}>
-            <Container className={classes.column}>
-              <Typography variant="button" display="block" gutterBottom>
-                First Column
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            First link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  First link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Second link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Second link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Third link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Third link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Fourth link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fourth link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Fifth link
+          </Link>
+        </Typography>
+      </Grid>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fifth link
-                </Link>
-              </Typography>
-            </Container>
-          </Grid>
+      {/* Second column */}
+      <Grid item xs={3} md={2} className={classes.column}>
+        <Typography variant="button" gutterBottom>
+          Second Column
+        </Typography>
 
-          {/* Second column */}
-          <Grid item xs={2}>
-            <Container className={classes.column}>
-              <Typography variant="button" display="block" gutterBottom>
-                Second Column
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            First link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  First link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Second link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Second link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Third link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Third link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Fourth link
+          </Link>
+        </Typography>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fourth link
-                </Link>
-              </Typography>
+        <Typography gutterBottom>
+          <Link href="#footer" component="button" variant="body2">
+            Fifth link
+          </Link>
+        </Typography>
+      </Grid>
 
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fifth link
-                </Link>
-              </Typography>
-            </Container>
-          </Grid>
+      {/* Social media */}
+      <Grid item xs={5} md={2} className={classes.column}>
+        <Typography variant="button" gutterBottom>
+          Reach out to us!
+        </Typography>
 
-          {/* Third column */}
-          <Grid item xs={2}>
-            <Container className={classes.column}>
-              <Typography variant="button" display="block" gutterBottom>
-                Third Column
-              </Typography>
-
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  First link
-                </Link>
-              </Typography>
-
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Second link
-                </Link>
-              </Typography>
-
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Third link
-                </Link>
-              </Typography>
-
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fourth link
-                </Link>
-              </Typography>
-
-              <Typography display="block" gutterBottom>
-                <Link href="#footer" component="button" variant="body2">
-                  Fifth link
-                </Link>
-              </Typography>
-            </Container>
-          </Grid>
-
-          {/* Social media */}
-          <Grid item xs>
-            <Container className={classes.column}>
-              <Typography variant="button" display="block" gutterBottom>
-                Reach out to us!
-              </Typography>
-
-              <Grid item xs={6}>
-                <Container className={classes.icon_container}>
-                  <AiFillFacebook size={42} />
-                  <AiFillYoutube size={42} />
-                  <AiFillGithub size={42} />
-                </Container>
-              </Grid>
-            </Container>
-          </Grid>
-
-          <Grid item xs={2} className={classes.extra_grid_space}>
-            {/* Spacing here */}
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+        <Container className={classes.icon_container}>
+          <AiFillFacebook size={42} />
+          <AiFillYoutube size={42} />
+          <AiFillGithub size={42} />
+        </Container>
+      </Grid>
+    </Grid>
   );
 }
 
