@@ -33,7 +33,7 @@ function ParticlesComponent() {
           modes: {
             bubble: {
               distance: 800,
-              duration: 2,
+              duration: 1,
               opacity: 0.8,
               size: 20,
             },
@@ -65,7 +65,7 @@ function ParticlesComponent() {
             enable: true,
             outMode: 'bounce',
             random: false,
-            speed: 1,
+            speed: 0.6,
             straight: false,
           },
           number: {
