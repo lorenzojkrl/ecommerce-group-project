@@ -6,10 +6,9 @@ const useStyles = makeStyles((theme) => ({
     top: '15vh',
     textAlign: 'left',
     color: '#FDFAF6',
-  },
-  icon_container: {
-    padding: theme.spacing(0),
-    color: '#0A1931',
+    [theme.breakpoints.between('sm', 'md')]: {
+      top: '3vh',
+    },
   },
 }));
 
