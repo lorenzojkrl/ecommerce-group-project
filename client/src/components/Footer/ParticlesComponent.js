@@ -52,7 +52,7 @@ function ParticlesComponent() {
           },
           links: {
             color: '#ffffff',
-            distance: 190,
+            distance: 120,
             enable: true,
             opacity: 0.5,
             width: 1,
