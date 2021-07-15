@@ -23,31 +23,31 @@ function Footer() {
       <Grid item xs={3} md={2} className={classes.column}>
         <Typography variant="button">First Column</Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             First link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Second link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Third link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Fourth link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Fifth link
           </Link>
@@ -56,35 +56,33 @@ function Footer() {
 
       {/* Second column */}
       <Grid item xs={3} md={2} className={classes.column}>
-        <Typography variant="button" gutterBottom>
-          Second Column
-        </Typography>
+        <Typography variant="button">Second Column</Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             First link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Second link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Third link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Fourth link
           </Link>
         </Typography>
 
-        <Typography gutterBottom>
+        <Typography>
           <Link href="#footer" component="button" variant="body2">
             Fifth link
           </Link>
@@ -93,11 +91,9 @@ function Footer() {
 
       {/* Social media */}
       <Grid item xs={5} md={2} className={classes.column}>
-        <Typography variant="button" gutterBottom>
-          Reach out to us!
-        </Typography>
+        <Typography variant="button">Reach out to us!</Typography>
 
-        <Container className={classes.icon_container}>
+        <Grid item xl={2}>
           <Button href="#">
             <AiFillFacebook size={40} />
           </Button>
@@ -109,7 +105,7 @@ function Footer() {
           <Button href="#">
             <AiFillGithub size={40} />
           </Button>
-        </Container>
+        </Grid>
       </Grid>
     </Grid>
   );
