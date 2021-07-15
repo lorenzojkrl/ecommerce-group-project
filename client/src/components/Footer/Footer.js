@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import { Grid, Link, Typography, Button } from '@material-ui/core';
 import { AiFillFacebook, AiFillGithub, AiFillYoutube } from 'react-icons/ai';
 import ParticlesComponent from './ParticlesComponent';
@@ -9,12 +8,7 @@ function Footer() {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      direction="row"
-      justifyContent="space-evenly"
-      alignItems="stretch"
-    >
+    <Grid container direction="row" alignItems="stretch">
       <Grid item xs={1} md={3}>
         <ParticlesComponent />
       </Grid>
