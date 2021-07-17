@@ -17,6 +17,7 @@ function SecondContainer() {
       <Grid item xs={12} sm={6}>
         <img
           src={OnlineShopping}
+          height="auto"
           className={classes.display_shopping}
           alt="online-shopping"
         />
