@@ -1,14 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   column: {
     position: 'relative',
     top: '15vh',
     textAlign: 'left',
     color: '#FDFAF6',
-    [theme.breakpoints.between('sm', 'md')]: {
-      top: '3vh',
-    },
   },
 }));
 

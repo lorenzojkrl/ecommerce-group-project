@@ -8,10 +8,10 @@ function Newsletter() {
 
   return (
     <Grid
+      className={classes.fourth_container}
       container
       alignItems="center"
       direction="row"
-      className={classes.fourth_container}
     >
       <Grid item xs={12} sm={6}>
         <Typography variant="h2" gutterBottom>
