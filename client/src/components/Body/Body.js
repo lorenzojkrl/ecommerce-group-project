@@ -1,14 +1,14 @@
-import React from "react";
-import "@fontsource/roboto";
-import { CssBaseline } from "@material-ui/core";
-import FirstContainer from "../Containers/FirstContainer";
-import SecondContainer from "../Containers/SecondContainer";
-import Newsletter from "../Containers/Newsletter";
-import { TrustBadgeContainer } from "../Containers/TrustBadgeContainer";
+import React from 'react';
+import '@fontsource/roboto';
+import { CssBaseline } from '@material-ui/core';
+import FirstContainer from '../Containers/FirstContainer';
+import SecondContainer from '../Containers/SecondContainer';
+import Newsletter from '../Containers/Newsletter';
+import TrustBadgeContainer from '../Containers/TrustBadgeContainer';
 
 function Body() {
   return (
-    <section>
+    <main>
       <CssBaseline />
       {/* First container */}
       <FirstContainer />
@@ -21,7 +21,7 @@ function Body() {
 
       {/* Fourth container */}
       <Newsletter />
-    </section>
+    </main>
   );
 }
 

@@ -1,33 +1,38 @@
-import React from "react";
-import { Container, Grid, Box, Typography } from "@material-ui/core";
-import useStyles from "./FirstContainerStyles";
-import MacBook from "../../assets/images/MacBook.svg";
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import useStyles from './FirstContainerStyles';
+import MacBook from '../../assets/images/MacBook.svg';
 
 function FirstContainer() {
   const classes = useStyles(useStyles);
 
   return (
-    <Container
+    <Grid
       className={classes.first_container}
-      maxWidth={true}
-      component="div"
+      container
+      alignItems="center"
+      direction="row"
     >
-      <Grid container justify="center" alignItems="stretch" direction="column">
-        <Box className={classes.box_in_first_container}>
-          <Typography className={classes.root} variant="h2">
-            We innovate your <br /> online shopping <br /> experience
-          </Typography>
-          <br />
-          <Typography className={classes.subtitle_1} variant="subtitle1">
-            What do you wanna shop today? <br /> What do you need? Just tell us.
-          </Typography>
-        </Box>
-
-        <Box className={classes.display_macbook}>
-          <img src={MacBook} alt="macbook" width="390vw" />
-        </Box>
+      <Grid item xs={12} sm={7}>
+        <Typography color="primary" variant="h2">
+          We innovate your <br /> online shopping <br /> experience
+        </Typography>
+        <br />
+        <Typography color="primary" variant="subtitle1">
+          What do you wanna shop today? <br /> What do you need? Just tell us.
+        </Typography>
       </Grid>
-    </Container>
+
+      <Grid item xs={12} sm={4}>
+        <img
+          className={classes.display_macbook}
+          height="auto"
+          src={MacBook}
+          alt="macbook"
+        />
+        {/* width="390vw" */}
+      </Grid>
+    </Grid>
   );
 }
 

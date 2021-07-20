@@ -1,4 +1,5 @@
-import Particles from "react-tsparticles";
+import React from 'react';
+import Particles from 'react-tsparticles';
 
 function ParticlesComponent() {
   return (
@@ -7,32 +8,32 @@ function ParticlesComponent() {
       id="tsparticles"
       height="65vh"
       style={{
-        position: "absolute",
+        position: 'absolute',
       }}
       options={{
         background: {
           color: {
-            value: "#8C30F5",
+            value: '#8C30F5',
           },
         },
         fpsLimit: 60,
         interactivity: {
-          detectsOn: "canvas",
+          detectsOn: 'canvas',
           events: {
             onClick: {
               enable: true,
-              mode: "grab",
+              mode: 'grab',
             },
             onHover: {
               enable: true,
-              mode: "grab",
+              mode: 'grab',
             },
             resize: true,
           },
           modes: {
             bubble: {
-              distance: 400,
-              duration: 2,
+              distance: 800,
+              duration: 1,
               opacity: 0.8,
               size: 20,
             },
@@ -47,11 +48,11 @@ function ParticlesComponent() {
         },
         particles: {
           color: {
-            value: "#ffffff",
+            value: '#ffffff',
           },
           links: {
-            color: "#ffffff",
-            distance: 190,
+            color: '#ffffff',
+            distance: 120,
             enable: true,
             opacity: 0.5,
             width: 1,
@@ -60,11 +61,11 @@ function ParticlesComponent() {
             enable: true,
           },
           move: {
-            direction: "none",
+            direction: 'none',
             enable: true,
-            outMode: "bounce",
+            outMode: 'bounce',
             random: false,
-            speed: 1,
+            speed: 0.6,
             straight: false,
           },
           number: {
@@ -78,7 +79,7 @@ function ParticlesComponent() {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             random: true,

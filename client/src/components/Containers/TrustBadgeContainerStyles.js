@@ -1,28 +1,19 @@
-import {makeStyles} from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        backgroundColor: "#FFF0E5",
-        // height: "80vh"
-        height: 500,
-        textAlign: "center"
+  root: {
+    backgroundColor: '#FFF0E5',
+    height: 'min(70vh, 500px)',
+    [theme.breakpoints.down('sm')]: {
+      height: 'min(80vh, 500px)',
+      padding: 20,
     },
-    card: {
-        boxShadow: "none",
-        backgroundColor: "inherit",
-        overflow: "hidden",
-        display: "inline-flex",
-        flexFlow: "column",
-        alignItems: "center",
+    [theme.breakpoints.down('xs')]: {
+      height: 'min(80vh, 350px)',
+      padding: 20,
     },
-    cardGrid: {
-        overflowX: "hidden"
-    },
-    media: {
-        height: 102,
-        width: 102,
-        borderRadius: "50%"
-    }
+    textAlign: 'center',
+  },
 }));
 
-export { useStyles }
+export default useStyles;

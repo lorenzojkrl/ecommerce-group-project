@@ -1,33 +1,19 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   second_container: {
-    backgroundColor: "grey.300",
-    height: "65vh",
-    [theme.breakpoints.between("xs", "sm")]: {
-      height: "85vh",
+    backgroundColor: 'grey.300',
+    height: 'min(65vh, 400px)',
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+      height: 'min(100vh, 650px)',
     },
   },
   display_shopping: {
-    position: "relative",
-    left: "15vw",
-    top: "15vh",
-    [theme.breakpoints.between("xs", "sm")]: {
-      left: "1vw",
-      top: "2vh",
-    },
-  },
-  grid_typography: {
-    position: "relative",
-    left: "15vw",
-    top: "15vh",
-    color: "#2B3C2A",
-    [theme.breakpoints.between("xs", "sm")]: {
-      left: "1vw",
-      top: "5vh",
+    width: '60%',
+    marginLeft: '10%',
+    [theme.breakpoints.down('xs')]: {
+      width: 'calc(100% - 10em)',
     },
   },
 }));
