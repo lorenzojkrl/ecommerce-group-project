@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import Carousel from 'components/Carousel/Carousel';
+import Carousel from '../Carousel/Carousel';
 import useStyles from './TrustBadgeContainerStyles';
 
 const defaultTestimonials = [
